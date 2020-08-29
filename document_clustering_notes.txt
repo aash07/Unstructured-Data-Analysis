@@ -1,0 +1,33 @@
+From Cluster centers we will be able to infer the dominating term in that cluster
+
+(16.8,14.0) is the cluster center for one of the clusters
+(73.2,74.8) is the cluster center for another cluster
+
+in the first cluster the centeroid of the T1 is 16.8 and centeroid of second term, T2 is 14.0. these centeroids are nothing but the airthmetic averages.
+in other words 16.8 is the average of all the term frequencies across all documents  in cluster 1. Since 16.8 > 14.0 in cluster 1 we can conculde that cluster 1 s more about term1 than term-2. Similarly in cluster-2 T2 is more dominating than T1
+
+Lets assume this documents here are mobile reviews,
+ T1 is "battery" and T2 is Camera.
+ cluster-1 is about reviews which talks more about battery and cluster-2 is about reviews which talks more about camera
+
+Array of cluster centers
+array([[73.2, 74.8],	
+       [16.8, 14. ]])	
+BOW = ['t1','t2']
+num_clusters=2
+Step:1. From the array of cluster centers - for each row sort the arguments in descending order, such that the index of the highest centeroid value appears first and least appeast last - ordered_centeroid_arg (use argsort and then sort the arg in descending order)
+
+o/p after first step
+array([[1, 0],	
+       [0, 1]]	
+
+Step:2. For every cluster
+	1.subset the ordered_centeroid_arg to get the indexes of the  top(n) terms
+	2. for every index :
+		2.1 Subset the BOW to print the terms
+
+Cluster : 0
+t2
+Cluster : 1
+t1
+Note: t1 is at index 0 and t2 is at index 1 in the input array of cluster centers

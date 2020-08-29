@@ -1,0 +1,11 @@
+Scrape 
+	1. The most recent Narendra Modi's tweet or
+	2. New articles for NDTV
+ perform the below  Tasks: 
+    •	Clean the tweets
+    •	Create the DTM using CountVectorizer; Set min_df = 5
+    •	Using KMeans algorithm, cluster the tweets in to 4 groups
+    •   Get the:
+	1. top 5 hashtags in each group ( only applicable for twitter data)
+	2. top 5 words in each group
+    •	Create word cloud for each group
